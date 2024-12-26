@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --bigFontSize: 28px;
+  --smallFontSize: 24px;
+  --gray-border: gray;
+  --numOfBgColor: #563bdb;
+  --grayBg: gray;
+  --font-family: "Poppins", sans-serif;
+}
+
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: var(--font-family);
+}
+
+.section-container-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.section-image-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: #f2f0ff;
+  padding: 20px;
+  border-radius: 20px;
+  width: 45%;
+}
+.section-image-box img {
+  width: 100%;
+}
+
+.section-text-container {
+  width: 45%;
+}
+
+.section-text-container::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-bottom: 2px dashed var(--gray-border);
+  width: 10%;
+  height: 1px;
+  z-index: 99;
+}
+.section-text-container::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-bottom: 2px dashed var(--gray-border);
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border: 2px solid var(--gray-border);
+  border-radius: 100%;
+  z-index: 999;
+}
+.number-and-text-container {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.text-and-dot-container {
+  position: relative;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 25px;
+  gap: 20px;
+  border: 1px solid var(--gray-border);
+  border-radius: 10px;
+}
+.dot-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1px;
+}
+.dot-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1px;
+}
+.dot {
+  background-color: var(--grayBg);
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+}
+.text-container {
+  font-size: 20px;
+}
+.number-box {
+  width: 15%;
+  height: 30px;
+  background-color: var(--numOfBgColor);
+  color: white;
+  text-align: center;
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 140px;
+  position: relative;
+  z-index: 999 !important;
+}
+.number-box::after {
+  content: "";
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 2px dashed var(--gray-border);
+  width: 2px;
+  height: 40px;
+  z-index: 99;
+}
