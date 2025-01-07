@@ -8,9 +8,9 @@
 :root {
   --bigFontSize: 28px;
   --smallFontSize: 24px;
-  --gray-border: gray;
-  --numOfBgColor: #563bdb;
-  --grayBg: gray;
+  --gray-border: #1c4dec;
+  --numOfBgColor: #1c4dec;
+  --grayBg: #1c4dec;
   --font-family: "Poppins", sans-serif;
 }
 
@@ -42,6 +42,7 @@
 }
 .section-image-box img {
   width: 100%;
+  border-radius: 10px;
 }
 
 .section-text-container {
@@ -58,6 +59,7 @@
   width: 10%;
   height: 1px;
   z-index: 99;
+  transition: all 0.3s ease-in-out;
 }
 .section-text-container::before {
   content: "";
@@ -71,6 +73,7 @@
   border: 2px solid var(--gray-border);
   border-radius: 100%;
   z-index: 999;
+  transition: all 0.3s ease-in-out;
 }
 .number-and-text-container {
   display: flex;
@@ -89,6 +92,7 @@
   gap: 20px;
   border: 1px solid var(--gray-border);
   border-radius: 10px;
+  transition: all 0.3s ease-in-out;
 }
 .dot-container {
   display: flex;
@@ -108,6 +112,7 @@
   width: 8px;
   height: 8px;
   border-radius: 100%;
+  transition: all 0.3s ease-in-out;
 }
 .text-container {
   font-size: 20px;
@@ -125,6 +130,7 @@
   border-radius: 140px;
   position: relative;
   z-index: 999 !important;
+  transition: all 0.3s ease-in-out;
 }
 .number-box::after {
   content: "";
@@ -136,8 +142,33 @@
   width: 2px;
   height: 40px;
   z-index: 99;
-}
+  transition: all 0.3s ease-in-out;
 
+}
+.section-container-inner:hover .text-and-dot-container {
+  background-color: #000000a7;
+  color: #f2f0ff;
+  transition: all 0.3s ease-in-out;
+  border-color: gray;
+}
+.section-container-inner:hover .number-box {
+  background-color: #000000a7;
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+.section-container-inner:hover .section-text-container::before,
+.section-container-inner:hover .section-text-container::after{
+  border-color: gray;
+  transition: all 0.3s ease-in-out;
+}
+.section-container-inner:hover .dot {
+  background-color: gray;
+  transition: all 0.3s ease-in-out;
+}
+.section-container-inner:hover .number-box::after{
+  border-color: gray;
+  transition: all 0.3s ease-in-out;
+}
 @media screen and (max-width: 570px) {
   .section-container {
     padding: 0 10px;
@@ -148,7 +179,6 @@
     height: 50vh;
     gap: 60px;
     border: 1px solid red;
-
   }
   .section-image-box {
     width: 96%;
