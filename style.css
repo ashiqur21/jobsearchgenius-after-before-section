@@ -35,10 +35,11 @@
   justify-content: center;
   align-items: center;
   gap: 20px;
-  background-color: #f2f0ff;
+  background-color: #59c4f283;
   padding: 20px;
   border-radius: 20px;
   width: 45%;
+  transition: all 0.3s ease-in-out;
 }
 .section-image-box img {
   width: 100%;
@@ -143,7 +144,6 @@
   height: 40px;
   z-index: 99;
   transition: all 0.3s ease-in-out;
-
 }
 .section-container-inner:hover .text-and-dot-container {
   background-color: #000000a7;
@@ -157,7 +157,7 @@
   transition: all 0.3s ease-in-out;
 }
 .section-container-inner:hover .section-text-container::before,
-.section-container-inner:hover .section-text-container::after{
+.section-container-inner:hover .section-text-container::after {
   border-color: gray;
   transition: all 0.3s ease-in-out;
 }
@@ -165,8 +165,19 @@
   background-color: gray;
   transition: all 0.3s ease-in-out;
 }
-.section-container-inner:hover .number-box::after{
+.section-container-inner:hover .number-box::after {
   border-color: gray;
+  transition: all 0.3s ease-in-out;
+}
+.section-container-inner:hover .section-image-box {
+  background-color: #000000a7;
+  transition: all 0.3s ease-in-out;
+}
+.image-title {
+  transition: all 0.3s ease-in-out;
+}
+.section-container-inner:hover .image-title {
+  color: #fff;
   transition: all 0.3s ease-in-out;
 }
 @media screen and (max-width: 570px) {
@@ -177,13 +188,14 @@
     flex-direction: column;
     justify-content: start;
     height: 50vh;
-    gap: 60px;
-    border: 1px solid red;
+    gap: 50px;
+    margin-bottom: 10px;
   }
   .section-image-box {
     width: 96%;
     height: 45%;
     gap: 0;
+    padding: 20px;
   }
   .image-title {
     font-size: 4vw;
@@ -196,7 +208,6 @@
     width: 100%;
     height: 45%;
     margin-left: auto;
-    border: 1px solid red;
   }
   .section-text-container p {
     font-size: 3.5vw;
